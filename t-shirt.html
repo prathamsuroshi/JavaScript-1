@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Order Form</title>
+
+    <style>
+        body {
+            background-color: white;
+            background-image: linear-gradient(to right, rgb(34, 33, 33), white, white);
+            color: #283618;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        input {
+            border-color: black;
+        }
+
+        #img {
+            background-image: url("backgoundimg.jpg");
+            height: 1400px;
+            background-repeat: no-repeat;
+            position: sticky;
+            background-position: right;
+        }
+
+        #img1 {
+            position: relative;
+            width: 50%;
+        }
+
+        button {
+            background-color: #b0ded8;
+            color: #2d525d;
+            font-size: larger;
+        }
+
+        button:hover {
+            color: #fb8500;
+        }
+
+        button:active {
+            background-color: green;
+        }
+
+        input {
+            background-color: #264653;
+            border: 2px solid black;
+            color: white;
+        }
+
+        ::placeholder {
+            color: aliceblue;
+        }
+
+        .add {
+            font-size: large;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form id="validation">
+        <div id="img">
+
+            <center>
+                <h1 style="color: #001524;"> T-shirt order form </h1>
+
+                <img src="backgroundimg1.jpg" alt="head" width="300" id="img1">
+            </center>
+            <br>
+            <label for="tagline" style=" font-size:larger;">Enter tagline :
+
+                <input type="text" name="tagline" id="tagline" style="background-color:#264653 ;
+border: 2px solid black; color: white;">
+            </label>
+
+            <p>
+                <label for="Quantity" style="font-size:larger;">Quantity :</label>
+                <input type="number" id="Quantity" name="Quantity" min="1" max="10">
+
+            </p>
+
+            <hr style="width: 600px; position: relative; right:0%;">
+            <p>
+            <h3>Choose the size</h3>
+            <select id="size">
+                <option value="">size</option>
+                <option value="small" style="font-size:small;">Small</option>
+                <option value="large" style="font-size:large;">large</option>
+                <option value="XL" style="font-size:larger;">XL</option>
+                <option value="XXL" style="font-size:x-large;">XXL</option>
+                <option value="XXXL" style="font-size:xx-large;">XXXL</option>
+
+            </select>
+            </p>
+            <hr style="width: 600px; position: relative; right:0%;">
+
+            <h3>Choose the color</h3>
+
+            <div class="color">
+                <input type="radio" name="choose-color" id="1" value="white" />
+                <label for="white" style="color:white ;"> White </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="2" value="Black" />
+                <label for="Black" style="color:black ;"> Black </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="3" value="green" />
+                <label for="green" style="color:green ;"> Green </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="4" value="D" />
+                <label for="D" style="color:red ;"> Red </label>
+            </div>
+
+            <div class="color">
+                <input type="radio" name="choose-color" id="5" value="blue" />
+                <label for="blue" style="color:blue ;"> Blue </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="8" value="grey" />
+                <label for="grey" style="color:grey ;"> Grey </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="7" value="pink" />
+                <label for="pink" style="color:pink ;"> Pink </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="choose-color" id="6" value="purple" />
+                <label for="purple" style="color:purple ;"> purple </label>
+            </div>
+            <br>
+            <br>
+            <textarea id="request" rows="7" cols="30" placeholder="Special request...."
+                style=" border: 3px solid black; background-color: #b5838d;"></textarea>
+            <hr style="width: 600px; position: relative; right:0%;">
+            <h2>Cutomer Details</h2>
+
+            <h3>Name</h3>
+            <div class="add">
+                <label for="fname" >First Name:
+                    <input type="text" name="detail" id="fname" class="detail">
+                </label>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <label for="lname" >Last Name
+                    <input type="text" name="detail" id="lanme" class="detail">
+                </label>
+            </div>
+            <br>
+
+            <h3>Email</h3>
+            <div class="add">
+                <label for="email">Enter Your Email
+                    <input type="text" id="email" name="detail" class="detail" placeholder="abc@gmail.com" >
+                </label>
+            </div>
+            <br>
+            <h3>Shipping Address</h3>
+            <div class="add">
+                <label for="address">
+                    <input size="50" name="detail" type="text" id="address" class="detail"
+                        placeholder="street address line 1" ><br><br>
+                    <input size="50" name="detail1" type="text" id="detail1" class="detail1" placeholder="street address line 2">
+                </label>
+
+                <br><br>
+                <label for="city" >city :
+                    <input type="text" name="detail" id="city" class="detail" >
+                </label>
+                &nbsp;&nbsp;
+                <label for="state">State :
+                    <input type="text" name="detail" id="state" class="detail" >
+                </label>
+
+                <br><br>
+
+                <label for="pcode" >postal code :
+                    <input size="10" name="detail" type="text" class="detail" id="pcode" >
+                </label>
+            </div>
+
+            <h3>Phone Number</h3>
+            <label for="pnumber"  style=" font-size:large;">phone number :
+                <input type="text" name="detail" class="detail" id="pnumber" maxlength="10"  />
+            </label>
+            <br><br>
+           </div>
+            <hr style="width: 600px; position: relative; right:0%;">
+            <h3>Payment option</h3>
+            <div class="add">
+                <input type="radio" name="payment" id="cc" value="Credit Card">
+                <label for="Credit Card" >Credit Card
+                </label>
+                <br>
+
+                <input type="radio" name="payment" id="upi" value="UPI">
+                <label for="UPI" >UPI
+                </label>
+                <br>
+                <input type="radio" name="payment" id="dc" value="Debit Card">
+                <label for="Debit Card" >Debit Card
+
+                </label>
+            </div>
+
+            <br><br>
+            <button type="submit" onclick="myfunction()">Place Order</button>
+
+            <br>
+            <br>
+    </form>
+</body>
+<script>
+
+    const tag = document.getElementById("tagline");
+    const quant = document.getElementById("Quantity");
+    const size1 = document.getElementById("size");
+    const req = document.getElementById("request");
+    const add_2 = document.getElementById("detail1");
+
+    function myfunction(){
+        if(tag.value === '' || tag.value == null){
+            alert("Please enter tagline");
+            event.preventDefault();
+            return;
+        }
+        if(quant.value === '' || quant.value == null){
+            alert("please enter quantity");
+            event.preventDefault();
+            return;
+        }
+        if(size1.value === '' || size1.value == null){
+            alert("please select size");
+            event.preventDefault();
+            return;
+        }
+
+        let x = false;
+        var radios = document.getElementsByName('choose-color');
+        var value;
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].type === 'radio' && radios[i].checked) {
+                x = true;
+                value = radios[i].value;
+                //alert(`selected color is ${value}`); 
+                break;      
+             }
+        }
+
+        if(x === false){
+            alert("please select color");
+            event.preventDefault();
+            return;
+        }
+
+        let z = false;
+        var detail = document.getElementsByClassName('detail');
+
+        for (var i=0;i<detail.length; i++){
+            if(detail[i].type === 'number' || detail[i].type === 'text' && detail[i].value.length===0){
+                z= true;
+                break;
+            }
+        }
+
+        if(z === true){
+            alert("please fill all customer details");
+            event.preventDefault();
+            return;
+        }
+
+        let y = false;
+        var pays = document.getElementsByName('payment');
+        var value1;
+        for (var i=0;i<pays.length; i++){
+            if(pays[i].type === 'radio' && pays[i].checked){
+                y= true;
+                value1 = pays[i].value;
+                //alert(`selected payment option is ${value1}`);
+                break;
+            }
+        }
+
+        if(y === false){
+            alert("please select payment option");
+            event.preventDefault();
+            return;
+        }
+
+        const receipt = `Thanks for ordering tshirt!\n
+        Your receipt:\n${new Date().toLocaleDateString("UK")}\nTagline: ${tag.value}\nQuantity: ${quant.value}\nColor: ${value}\nSize: ${size1.value}\n${(req.value.length > 0)? `Special request: ${req.value}` : `${""}`} \nPaymenet method: ${value1}\nCustomer Info \n Name: ${detail[i].value} ${detail[1].value} \nEmail: ${detail[2].value}\nAddress: ${detail[3].value} ${(detail1.value.length > 0) ? `${detail1.value}` : `${""}`}\ncity: ${detail[4].value}    State: ${detail[5].value}    postal code: ${detail[6].value}\nPhone number: ${detail[7].value}`;
+        alert(receipt);
+        event.preventDefault();
+    }
+        
+</script>
+
+</html>
